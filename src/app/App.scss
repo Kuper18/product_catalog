@@ -1,0 +1,36 @@
+@import '../shared/styles/reset.scss';
+@import '../shared/styles/fonts.scss';
+@import '../shared/styles/mixin.scss';
+@import '../shared/styles/variables.scss';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Mont-regular', sans-serif;
+}
+
+body.disable_scroll {
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.main {
+  width: 100%;
+  min-height: calc(100vh - 321px);
+  padding-inline: 16px;
+  background-color: $hover-and-bg;
+  
+  @include onTablet {
+    @include flex-justify-center-align-center;
+    min-height: calc(100vh - 144px);
+    padding-inline: 32px;
+  }
+
+  @include onDesktop {
+    min-height: calc(100vh - 160px);
+  }
+}

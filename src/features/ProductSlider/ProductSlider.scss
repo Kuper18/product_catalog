@@ -1,0 +1,60 @@
+@import '../../shared/styles/variables.scss';
+@import '../../shared/styles/mixin.scss';
+
+.slick-list {
+  padding: 0 -10px;
+}
+
+.slick-slide {
+  padding: 20px 10px;
+  height: auto;
+}
+
+.slick-track {
+  display: flex;
+  height: auto;
+}
+
+// styles to expand all items inside slick-container
+// to the size of slick-slide div
+div.slick-slide > div {
+  height: 100%;
+  width: 100%;
+}
+
+.arrow {
+  position: absolute;
+  top: -63px;
+  right: 10px;
+  z-index: 1;
+  cursor: pointer;
+  border: 1px solid $icons;
+
+  &:hover {
+    border: 1px solid $primary;
+  }
+
+  &-left {
+    width: 33px;
+    height: 33px;
+    right: 60px;
+    border-radius: 50%;
+    background-image: url('../../shared/static/icons/left-arrow-black.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &-right {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    background-image: url('../../shared/static/icons/right-arrow-black.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}

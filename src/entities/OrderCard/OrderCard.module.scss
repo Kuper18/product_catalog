@@ -1,0 +1,59 @@
+@import '../../shared/styles/variables.scss';
+@import '../../shared/styles/mixin.scss';
+
+.order__card_cart_item_container {
+  grid-column: span $columns-mobile;
+
+  @include onTablet {
+    grid-column: span $columns-tablet;
+  }
+
+  @include onDesktop {
+    grid-column: 1 / 16;
+  }
+}
+
+.order__card_cart_total_container {
+  grid-column: span $columns-mobile;
+
+  @include onTablet {
+    grid-column: span $columns-tablet;
+  }
+
+  @include onDesktop {
+    grid-column: 16 / 25;
+  }
+}
+
+.order__card_empty_container {
+  grid-column: span $columns-mobile;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  @include onTablet {
+    grid-column: span $columns-tablet;
+  }
+
+  @include onDesktop {
+    grid-column: 1 / 25;
+  }
+}
+
+.order__card {
+  &_message {
+    font-family: 'Mont-SemiBold';
+    font-size: 1.56rem;
+    grid-column: span 4;
+  }
+
+  &_empty_icon {
+    width: 150px;
+  }
+
+  &_button {
+    @include element-full-width-grid;
+    min-width: 200px;
+  }
+}

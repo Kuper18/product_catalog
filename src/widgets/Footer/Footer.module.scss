@@ -1,0 +1,172 @@
+@import '../../shared/styles/variables.scss';
+@import '../../shared/styles/mixin.scss';
+
+.footer {
+  box-shadow: 0px -1px 0px 0px $elements;
+  padding: 32px 16px;
+
+  font-family: 'Mont-bold';
+  color: $secondary;
+  background-color: $white;
+
+  @include onTablet {
+    padding: 32px 24px;
+  }
+
+  @include onDesktop {
+    padding: 32px 0;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1136px;
+  margin: 0 auto;
+
+  @include onTablet {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  &__icon {
+    display: block;
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    @include onTablet {
+      flex-direction: row;
+    }
+
+    @include onDesktop {
+      width: 379px;
+      justify-content: space-between;
+    }
+  }
+
+  &__link {
+    display: block;
+
+    font-family: inherit;
+    font-size: 0.75rem;
+    line-height: 11px;
+    font-weight: 800;
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.back_to_top {
+  @include flex-justify-center-align-center;
+  gap: 16px;
+
+  &__discription {
+    font-size: 0.75rem;
+    line-height: 15px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  &__icon {
+    @include flex-justify-center-align-center;
+
+    border-radius: 50%;
+    border: 1px solid $secondary;
+
+    width: 32px;
+    height: 32px;
+
+    color: inherit;
+    background-color: $white;
+
+    cursor: pointer;
+    transition: border 0.3s linear;
+  }
+
+  &__icon:hover {
+    border: 1px solid $primary;
+  }
+}
+
+.modal__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modalBody {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.person__card {
+  text-align: center;
+  width: 180px;
+  padding: 10px;
+  border: 1px solid $elements;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.7);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.person__photo {
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  outline: 1px solid $accent;
+}
+
+.person__name {
+  margin-bottom: 5px;
+}
+
+.secret__icon {
+  width: 170px;
+  margin-bottom: 20px;
+  box-shadow: 1px 1px 27px 12px rgba(0, 144, 255, 0.43);
+}
+
+.social__list {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.social__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__link {
+  height: 30px;
+}
+
+.social__icon {
+  height: 30px;
+}
